@@ -285,8 +285,8 @@
                 <p className="text-base sm:text-lg md:text-xl text-[#8c857d] mt-2">老師的班級管理小幫手</p>
               </div>
               <div className="flex flex-col items-center sm:items-end gap-1 sm:gap-2">
-                <span className="-mt-1 sm:mt-0 text-[#a39584] text-xs sm:text-sm md:text-base font-medium tracking-wide">created by 怡臻老師</span>
-                <span className="text-[#a39584] text-xs sm:text-sm md:text-base truncate max-w-[180px]">{user.email}</span>
+                <span className="-mt-1 sm:mt-0 text-[#a39584] text-sm md:text-base font-medium tracking-wide">created by 怡臻老師</span>
+                <span className="text-[#a39584] text-sm md:text-base truncate max-w-[180px] sm:max-w-none sm:overflow-visible sm:whitespace-normal sm:break-all">{user.email}</span>
                 <button onClick={handleLogout}
                   className="flex items-center gap-1.5 text-sm text-[#8c7e6c] bg-[#f4efe8] hover:bg-[#eaddca] px-3 py-1.5 rounded-xl font-bold transition-all">
                   <LogOut size={15} /> 登出
