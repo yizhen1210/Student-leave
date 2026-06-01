@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>班級請假登記系統</title>
+  <title>請假登記表</title>
 
   <!-- PWA 設定 -->
   <link rel="manifest" href="manifest.json" />
@@ -12,7 +12,7 @@
   <!-- iPhone / iPad 加到主畫面：名稱、全螢幕、圖示 -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="班級請假登記系統" />
+  <meta name="apple-mobile-web-app-title" content="請假登記表" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- Tailwind (Play CDN) -->
@@ -253,7 +253,7 @@
           <div className="min-h-screen bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center p-4" style={FONT}>
             <div className="bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(166,154,138,0.1)] border border-white/80 max-w-md w-full text-center">
               <div className="bg-[#a39584] p-5 rounded-2xl text-white inline-flex mb-6"><ClipboardList size={40} /></div>
-              <h1 className="text-2xl md:text-3xl font-extrabold text-[#4a443e] mb-2">班級請假登記系統</h1>
+              <h1 className="text-2xl md:text-3xl font-extrabold text-[#4a443e] mb-2">請假登記表</h1>
               <p className="text-[#8c857d] mb-8">請使用授權的 Google 帳號登入</p>
               <button onClick={handleLogin}
                 className="w-full py-3 md:py-4 bg-[#968875] text-white rounded-2xl font-bold text-lg hover:bg-[#857765] transition-all">
@@ -281,7 +281,7 @@
             <header className="bg-white/70 backdrop-blur-xl p-6 sm:p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(166,154,138,0.06)] flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-6 relative">
               <div className="bg-[#a39584] p-4 sm:p-5 rounded-2xl text-white shrink-0"><ClipboardList size={40} /></div>
               <div className="flex-1 w-full">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4a443e]">{semester} 班級請假登記系統</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4a443e]">{semester} 請假登記表</h1>
                 <p className="text-base sm:text-lg md:text-xl text-[#8c857d] mt-2">老師的班級管理小幫手</p>
               </div>
               <div className="flex flex-col items-center sm:items-end gap-2">
