@@ -2,8 +2,18 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>班級請假登記系統</title>
+
+  <!-- PWA 設定 -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#a98e6f" />
+
+  <!-- iPhone / iPad 加到主畫面：名稱、全螢幕、圖示 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="班級請假登記系統" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- Tailwind (Play CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
