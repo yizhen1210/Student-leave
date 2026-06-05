@@ -183,7 +183,7 @@
           });
         }
         setLeaves([...newRecords, ...leaves]);
-        showToast(`已新增 ${newRecords.length} 筆「${formData.type}」紀錄`);
+        showToast({ count: newRecords.length, type: formData.type });
       };
 
       const handleDelete = (id) => setLeaves(leaves.filter(r => r.id !== id));
@@ -244,7 +244,7 @@
       /* 還在確認登入狀態 */
       if (!authReady) {
         return (
-          <div className="min-h-screen bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center" style={FONT}>
+          <div className="min-h-[100dvh] bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center" style={FONT}>
             <div className="text-[#a39584] text-2xl font-bold flex items-center tracking-wider">
               <RefreshCcw className="animate-spin mr-4" size={32} /> 載入中...
             </div>
@@ -255,7 +255,7 @@
       /* 未登入 → 登入畫面 */
       if (!user) {
         return (
-          <div className="min-h-screen bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center p-4" style={FONT}>
+          <div className="min-h-[100dvh] bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center p-4" style={FONT}>
             <div className="bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(166,154,138,0.1)] border border-white/80 max-w-md w-full text-center">
               <div className="bg-[#a39584] p-5 rounded-2xl text-white inline-flex mb-6"><ClipboardList size={40} /></div>
               <h1 className="text-2xl md:text-3xl font-extrabold text-[#4a443e] mb-2">學生請假登記系統</h1>
@@ -272,7 +272,7 @@
       /* 已登入、資料同步中 */
       if (!isLoaded) {
         return (
-          <div className="min-h-screen bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center" style={FONT}>
+          <div className="min-h-[100dvh] bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] flex items-center justify-center" style={FONT}>
             <div className="text-[#a39584] text-2xl font-bold flex items-center tracking-wider">
               <RefreshCcw className="animate-spin mr-4" size={32} /> 正在同步雲端資料...
             </div>
@@ -436,8 +436,12 @@
           </div>
 
           {toast && (
-            <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[60] bg-[#5c554e] text-white px-5 py-3 rounded-2xl shadow-xl text-base md:text-lg font-bold flex items-center gap-2">
-              <PlusCircle size={20} /> {toast}
+            <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[60] bg-[#5c554e] text-white px-5 py-3 rounded-2xl shadow-xl text-base md:text-lg font-bold flex items-center gap-3 text-center whitespace-nowrap">
+              <PlusCircle size={22} className="shrink-0" />
+              <div className="flex flex-col leading-tight">
+                <span>已新增 {toast.count} 筆</span>
+                <span>「{toast.type}」紀錄</span>
+              </div>
             </div>
           )}
 
