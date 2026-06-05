@@ -16,7 +16,7 @@
 
   <!-- iPhone / iPad 加到主畫面：名稱、全螢幕、圖示 -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="請假登記表" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
@@ -281,7 +281,7 @@
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] text-[#5c554e] p-4 sm:p-6 md:p-10" style={FONT}>
+        <div className="min-h-screen bg-gradient-to-br from-[#f9f8f6] via-[#eeeae2] to-[#e0d9cd] text-[#5c554e] p-4 sm:p-6 md:p-10 [padding-top:calc(1rem+env(safe-area-inset-top))] sm:[padding-top:calc(1.5rem+env(safe-area-inset-top))] md:[padding-top:calc(2.5rem+env(safe-area-inset-top))]" style={FONT}>
           <div className="max-w-7xl mx-auto space-y-8 md:space-y-10">
             <header className="bg-white/70 backdrop-blur-xl p-6 sm:p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(166,154,138,0.06)] flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-6 relative">
               <div className="bg-[#a39584] p-4 sm:p-5 rounded-2xl text-white shrink-0"><ClipboardList size={40} /></div>
